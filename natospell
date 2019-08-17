@@ -6,30 +6,24 @@ import sys
 import time
 
 
-def playsound(path):
-    os.system(f"aplay {path}")
-
-
-def to_letters(string):
-    seq = []
-
+def file_sequence(string):
     for char in string:
-        if char.isalnum():
-            if char.isupper():
-                seq.append('capital')
-            seq.append(char.lower())
+        if not char.isalnum():
+            continue
+        if char.isupper():
+            yield 'capital'
 
-    return seq
-
-
-def to_files(letters):
-    return [f'sounds/{elem}.wav' for elem in letters]
+        yield f'sounds/{char.lower()}.wav'
 
 
-if __name__ == '__main__':
-    for f in to_files(to_letters(sys.argv[1])):
-        playsound(f)
+def main():
+    for f in file_sequence(sys.argv[1]):
+        os.system(f"aplay {f}")
         if f.endswith('capital.wav'):
             continue
         if len(sys.argv) > 2:
             time.sleep(float(sys.argv[2]))
+
+
+if __name__ == '__main__':
+    main()
