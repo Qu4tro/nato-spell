@@ -44,7 +44,7 @@ echo SPELLME | nato-spell - --sound-dir=/home/me/my-sound-dir --char-delay=1
 
 ## Sound assets 
 
-These sounds were created by Tim Kahn and hosted on freesound.org
+These sounds were published by Tim Kahn and hosted on freesound.org
  - Tim Kahn ( https://freesound.org/people/tim.kahn/ )
 
 Thank you Amy Gedgaudas and Tim Kahn for all these sounds.
