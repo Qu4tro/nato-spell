@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import argparse
 import os
 import sys
 import time
-import argparse
-from typing import NamedTuple
 from pathlib import Path
+from typing import NamedTuple
 
 DEFAULT_SOUND_DIRECTORY = Path(__file__).resolve().parent / "sounds"
 
 
 class Speller(NamedTuple):
     string: str
-    char_delay: int = 0.3
+    char_delay: float = 0.3
     sound_dir: Path = DEFAULT_SOUND_DIRECTORY
 
     @property
@@ -61,7 +61,7 @@ class Speller(NamedTuple):
         parser.add_argument(
             "-d1",
             "--char-delay",
-            type=int,
+            type=float,
             help="Tinker with the delay between character",
         )
         parser.add_argument(
