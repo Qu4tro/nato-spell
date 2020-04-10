@@ -21,3 +21,4 @@ python = "^3.8"
 
 [tool.poetry.scripts]
 nato_spell = "nato_spell:main"
+nato-spell = "nato_spell:main"
