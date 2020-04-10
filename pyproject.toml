@@ -6,7 +6,6 @@ authors = ["Xavier Francisco <xavier.n.francisco@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-playsound = "^1.2.2"
 
 [tool.poetry.dev-dependencies]
 
