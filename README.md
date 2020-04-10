@@ -9,7 +9,7 @@ System requirements:
   - **python >= 3**
 
 
-Use [pip](https://pip.pypa.io/en/stable/) or pipx to install `homiectl`.
+Use [pip](https://pip.pypa.io/en/stable/) or pipx to install `nato-spell`.
 
 ```bash
 pip install nato-spell
