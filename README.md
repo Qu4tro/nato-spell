@@ -13,6 +13,12 @@ Use [pip](https://pip.pypa.io/en/stable/) or pipx to install `nato-spell`.
 
 ```bash
 pip install nato-spell
+
+
+On Arch Linux, you can install from AUR. For example:
+
+```
+yay -S nato-spell-git
 ```
 
 ## Usage
