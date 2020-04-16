@@ -4,7 +4,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "nato-spell"
-version = "0.2.1"
+version = "0.3.1"
 description = "Spelling engine for the NATO phonetic alphabet"
 authors = ["Xavier Francisco <xavier.n.francisco@gmail.com>"]
 license = 'MIT'
@@ -12,7 +12,7 @@ readme = 'README.md'
 keywords = ["NATO", "spelling", "alphabet", "phonetic"]
 homepage = "https://github.com/Qu4tro/nato-spell/"
 repository = "https://github.com/Qu4tro/nato-spell/"
-include = ["sounds/*"]
+include = ["nato_spell/sounds/*"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
