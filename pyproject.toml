@@ -1,22 +1,45 @@
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.poetry]
+[project]
 name = "nato-spell"
-version = "0.3.1"
+version = "0.3.2"
 description = "Spelling engine for the NATO phonetic alphabet"
-authors = ["Xavier Francisco <xavier.n.francisco@gmail.com>"]
-license = 'MIT'
-readme = 'README.md'
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Xavier Francisco", email = "xavier.n.francisco@gmail.com" }]
 keywords = ["NATO", "spelling", "alphabet", "phonetic"]
-homepage = "https://github.com/Qu4tro/nato-spell/"
-repository = "https://github.com/Qu4tro/nato-spell/"
-include = ["nato_spell/sounds/*"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+requires-python = ">=3.9"
 
-[tool.poetry.dependencies]
-python = "^3.8"
+[project.urls]
+Homepage = "https://github.com/Qu4tro/nato-spell"
+Repository = "https://github.com/Qu4tro/nato-spell"
 
-[tool.poetry.scripts]
-nato_spell = "nato_spell:main"
+[project.scripts]
 nato-spell = "nato_spell:main"
+nato_spell = "nato_spell:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["nato_spell"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "nato_spell/**",
+    "README.md",
+    "LICENSE",
+]
