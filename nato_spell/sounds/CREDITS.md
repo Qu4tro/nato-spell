@@ -7,7 +7,7 @@ Thank you Amy Gedgaudas and Tim Kahn for all these sounds.
 
 # License
 
-Attribution: http://creativecommons.org/licenses/by/3.0/
+Attribution: https://creativecommons.org/licenses/by/4.0/
 
 # Packs
 

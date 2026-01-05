@@ -53,7 +53,7 @@ nato-spell HELLO --sound-dir=/path/to/sounds
 Sounds by Tim Kahn, hosted on freesound.org:
 - https://freesound.org/people/tim.kahn/
 
-Licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## License
 
