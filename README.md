@@ -1,66 +1,60 @@
 # nato-spell
 
-**nato-spell** is a Python package that can be used to spell a string / file with the well-known NATO phonetic alphabet.
+**nato-spell** is a Python package that spells text using the NATO phonetic alphabet.
 
 ## Installation
 
 System requirements:
-  - **aplay** (ALSA command line player - it may already be installed on your computer)
-  - **python >= 3**
+- **aplay** (ALSA command line player - likely already installed on Linux)
+- **Python >= 3.9**
 
-
-Use [pip](https://pip.pypa.io/en/stable/) or pipx to install `nato-spell`.
+### From PyPI
 
 ```bash
 pip install nato-spell
-
-
-On Arch Linux, you can install from AUR. For example:
-
 ```
+
+Or with [uv](https://docs.astral.sh/uv/):
+
+```bash
+uv tool install nato-spell
+```
+
+### From AUR (Arch Linux)
+
+```bash
 yay -S nato-spell-git
 ```
 
 ## Usage
 
-Minimal example
-```
-nato-spell SPELLME 
-```
-
-Spelling from stdin
-```
-echo SPELLME | nato-spell - 
+Spell a string:
+```bash
+nato-spell HELLO
 ```
 
-Increase the delay between characters (unit is seconds, default is 0)
-```
-nato-spell SPELLME --char-delay=1
-```
-
-Use a different sound directory
-```
-nato-spell SPELLME --sound-dir=/home/me/my-sound-dir
+Spell from stdin:
+```bash
+echo SECRET | nato-spell -
 ```
 
-And finally, an example, where we use them all together.
+Adjust delay between characters (seconds):
+```bash
+nato-spell HELLO --char-delay=0.5
 ```
-echo SPELLME | nato-spell - --sound-dir=/home/me/my-sound-dir --char-delay=1
+
+Use custom sounds:
+```bash
+nato-spell HELLO --sound-dir=/path/to/sounds
 ```
 
-## Sound assets 
+## Sound Credits
 
-These sounds were published by Tim Kahn and hosted on freesound.org
- - Tim Kahn ( https://freesound.org/people/tim.kahn/ )
+Sounds by Tim Kahn, hosted on freesound.org:
+- https://freesound.org/people/tim.kahn/
 
-Thank you Amy Gedgaudas and Tim Kahn for all these sounds.
-
-They're licensed under:
-http://creativecommons.org/licenses/by/3.0/
-
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+[MIT](LICENSE)
